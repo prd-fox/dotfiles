@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  ddclient:
+    image: lscr.io/linuxserver/ddclient:latest
+    container_name: ddclient
+    volumes:
+      - ./ddclient.conf:/config/ddclient.conf
+    restart: unless-stopped
