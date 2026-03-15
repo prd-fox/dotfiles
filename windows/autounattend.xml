@@ -112,6 +112,21 @@
           <Path>reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fSingleSessionPerUser /t REG_DWORD /d 0 /f</Path>
           <Description>Allow multiple simultaneous RDP sessions per user</Description>
         </RunSynchronousCommand>
+        <RunSynchronousCommand wcm:action="add">
+          <Order>16</Order>
+          <Path>powercfg /hibernate off</Path>
+          <Description>Disable hibernation</Description>
+        </RunSynchronousCommand>
+        <RunSynchronousCommand wcm:action="add">
+          <Order>17</Order>
+          <Path>reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v AutomaticManagedPagefile /t REG_DWORD /d 0 /f</Path>
+          <Description>Disable automatic managed pagefile</Description>
+        </RunSynchronousCommand>
+        <RunSynchronousCommand wcm:action="add">
+          <Order>18</Order>
+          <Path>reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v PagingFiles /t REG_MULTI_SZ /d "" /f</Path>
+          <Description>Clear pagefile entries to disable pagefile</Description>
+        </RunSynchronousCommand>
       </RunSynchronous>
     </component>
   </settings>
