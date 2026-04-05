@@ -1,0 +1,14 @@
+[push]
+	default = simple
+[credential]
+	helper = osxkeychain
+[gpg]
+	program = /opt/homebrew/bin/gpg
+[user]
+	name = Peter Fox
+	email = peter.rd.fox@gmail.com
+[core]
+	autocrlf = input
+	excludesfile = /Users/peter/.gitignore
+[pull]
+	rebase = false
