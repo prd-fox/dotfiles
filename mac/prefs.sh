@@ -130,7 +130,7 @@ sudo pmset -c sleep 0
 sudo pmset -b sleep 0
 
 # Set standby delay to 24 hours (default is 1 hour)
-sudo pmset -a standbydelay 86400
+sudo pmset -a standbydelay 86401
 
 ###############################################################################
 # Screen                                                                      #
